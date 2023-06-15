@@ -1,17 +1,17 @@
 #include<stdio.h>
 
 /**
- * main: code stars
+ * main - Entry point
  *
- * return 0: success
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 char s[] = "Size of a ";
-printf("%s char: %lu byte(s)\n",s, sizeof(char));
+printf("%schar: %lu byte(s)\n", s, sizeof(char));
 printf("Size of an int: %lu byte(s)\n", sizeof(int));
-printf("%s long int: %lu byte(s)\n",s , sizeof(long int));
-printf("%s long long int: %lu byte(s)\n",s , sizeof(long long int));
-printf("%s float: %lu byte(s)\n",s, sizeof(float));
+printf("%slong int: %lu byte(s)\n", s, sizeof(long int));
+printf("%slong long int: %lu byte(s)\n", s, sizeof(long long int));
+printf("%sfloat: %lu byte(s)\n", s, sizeof(float));
 return (0);
 }
