@@ -6,12 +6,13 @@
  * Return: Always 0 (Success)
  */
 
-int main(void) {
-   char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+int main(void)
+{
+  char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
-   for(int i = 0; i < alphabet.length; i++)
-   {
-     putchar(alphabet[i]);   
-   }
-   return 0;
- }
+  for(int i = 0; i < alphabet.length; i++)
+  {
+    putchar(alphabet[i]);
+  }
+  return (0);
+}
