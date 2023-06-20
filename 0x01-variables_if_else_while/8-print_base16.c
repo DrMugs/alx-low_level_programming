@@ -9,14 +9,16 @@
 int main(void)
 {
 	int i;
-  char aphabet[] = "abcdef"
+	int j;
+	char aphabet[] = "abcdef";
 
 	for (i = 0; i < 10; i++)
 	{
 
 		putchar('0' + i);
 	}
-  for (i = 0; i < 6; i++)
+
+	for (j = 0; j < 6; j++)
 	{
 
 		putchar(aphabet[i]);
