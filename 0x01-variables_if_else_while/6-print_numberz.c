@@ -9,13 +9,11 @@
 int main(void)
 {
 	int i;
-  char numbe[] = "";
 
 	for (i = 0; i < 10; i++)
 	{
 
-    numbe[i] = i;
-		putchar(numbe[i]);
+		putchar(i);
 	}
 
 	putchar('\n');
