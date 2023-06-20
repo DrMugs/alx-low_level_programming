@@ -9,11 +9,17 @@
 int main(void)
 {
 	int i;
+  char aphabet[] = "abcdef"
 
 	for (i = 0; i < 10; i++)
 	{
 
 		putchar('0' + i);
+	}
+  for (i = 0; i < 6; i++)
+	{
+
+		putchar(aphabet[i]);
 	}
 
 	putchar('\n');
