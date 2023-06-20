@@ -21,7 +21,7 @@ int main(void)
 	for (j = 0; j < 6; j++)
 	{
 
-		putchar(aphabet[i]);
+		putchar(aphabet[j]);
 	}
 
 	putchar('\n');
