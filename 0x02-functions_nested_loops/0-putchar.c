@@ -8,14 +8,16 @@
 
 int main(void)
 {
-  char putC[] = "_putchar";
+	char putC[] = "_putchar";
 
-  int i;
+	int i;
 
-  for (i = 0; i < 8; i++)
-  {
-    putchar(putC[i]);
-  }
-  putchar('\n');
-  return (0);
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(putC[i]);
+	}
+
+	_putchar('\n');
+	return (0);
+
 }

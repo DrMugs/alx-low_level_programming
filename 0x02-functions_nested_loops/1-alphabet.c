@@ -6,17 +6,15 @@
  * Return: Always 0 (Success)
  */
 
-void print_alphabet()
-
 int main(void)
 {
-  char putC[] = "_putchar";
+  char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
   int i;
 
-  for (i = 0; i < 8; i++)
+  for (i = 0; i < 26; i++)
   {
-    putchar(putC[i]);
+    putchar(alphabet[i]);
   }
   putchar('\n');
   return (0);
