@@ -2,21 +2,19 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet - print all alphabet in lowercase
  */
 
 void print_alphabet(void)
 {
-  char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
-  int i;
+	int i;
 
-  for (i = 0; i < 26; i++)
-  {
-    _putchar(alphabet[i]);
-  }
-  _putchar('\n');
-  
+	for (i = 0; i < 26; i++)
+	{
+		_putchar(alphabet[i]);
+	}
+
+	_putchar('\n');
 }
