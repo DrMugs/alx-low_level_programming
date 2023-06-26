@@ -8,5 +8,11 @@
  */
 int _strlen(char *s)
 {
-	return (sizeof(s) / sizeof(s[0]));
+	int count;
+
+	for (count = 0; *s[count] != '\0'; ++count)
+	{
+	}
+
+	return (count);
 }
