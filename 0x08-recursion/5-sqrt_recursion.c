@@ -17,6 +17,7 @@ int sqroot(int x, int y)
 	}
 	return (0 + sqroot(x, y + 1));
 }
+
 /**
  * _sqrt_recursion - returns natural square-root number
  * @n : number to be rooted
