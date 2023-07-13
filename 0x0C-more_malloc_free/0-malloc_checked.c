@@ -4,6 +4,7 @@
 /**
  * malloc_checked - allocates memory
  * @b : the amount memory to be allocated
+ * Return: ponter with adress created
  */
 void *malloc_checked(unsigned int b)
 {
