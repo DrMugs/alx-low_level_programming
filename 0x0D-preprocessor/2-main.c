@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - shws the file name
@@ -8,3 +7,6 @@
  */
 int main(void)
 {
+	printf("%s\n", __FILE__);
+	return (0);
+}
