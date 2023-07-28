@@ -16,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	count = str_counter(s1);
 	if (str_counter(s2) < n)
 		n = str_counter(s2);
-	str = (char *) malloc(sizeof(char) * (n + count));
+	str = (char *) malloc(sizeof(char) * (n + count + 1));
 
 	if (s1 == NULL)
 		s1 = "";
