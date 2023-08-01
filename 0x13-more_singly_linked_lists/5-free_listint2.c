@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 #include <stddef.h>
 #include <stdlib.h>
 
@@ -10,12 +10,14 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *hold;
-	listint_t *trans = *head;
 
-	while (trans != NULL)
+	while (*head != NULL)
 	{
-		hold = trans;
-		trans = trans->next;
+		hold = *head;
+		*head = (*head)->next;
 		free(hold);
 	}
+
+	free(*head);
+	head = NULL;
 }
