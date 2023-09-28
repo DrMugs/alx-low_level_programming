@@ -1,31 +1,29 @@
 #include "main.h"
 
 /**
- * print_binary - prints number to binary
- * @n : the number to be coverted
+ * print_binary - numbers are pritnted to binary
+ * @n : the value to converted
  */
 
 void print_binary(unsigned long int n)
 {
-	int i = 63, count = 0;
+	int j = 63, cnt = 0;
+	unsigned long int variable;
 
-	unsigned long int num;
-
-	while (i >= 0)
+	while (j >= 0)
 	{
-		num = n >> i;
+		variable = n >> j;
 
-		if (num & 1)
+		if (variable & 1)
 		{
 			_putchar('1');
-			count++;
+			cnt++;
 		}
-		else if (count)
+		else if (cnt)
 			_putchar('0');
-
-		i--;
+		j--;
 	}
 
-	if (!count)
+	if (!cnt)
 		_putchar('0');
 }

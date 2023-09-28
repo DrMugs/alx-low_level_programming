@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts binary number to number
+ * binary_to_uint - converts binary number to numerical value
  * @b: the binary digits
- * Return: the number or 0 if non binary
+ * Return: the numerical vcalue or 0 otherwise
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
+	unsigned int variable = 0;
 
 	if (!b)
 		return (0);
@@ -16,16 +16,16 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (*b == '0')
 		{
-			num <<= 1;
+			variable <<= 1;
 		}
 		else if (*b == '1')
 		{
-			num = (num << 1) | 1;
+			variable = (variable << 1) | 1;
 		}
 		else
 			return (0);
 		b++;
 	}
 
-	return (num);
+	return (variable);
 }
