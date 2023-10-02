@@ -8,23 +8,24 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file_d, a, size = 0;
+	int o_file, w_file, i = 0;
 
 	if (!filename)
 		return (-1);
 
 	if (text_content)
 	{
-		for (; text_content[size];)
-			size++;
+		for (; text_content[i];)
+			i++;
 	}
-	file_d = open(filename, O_WRONLY | O_APPEND);
-	a = write(file_d, text_content, size);
+	o_file = open(filename, O_WRONLY | O_APPEND);
 
-	if (file_d == -1 || a == -1)
+	w_file = write(o_file, text_content, i);
+
+	if (o_file == -1 || w_file == -1)
 		return (-1);
 
-	close(file_d);
+	close(o_file);
 
 	return (1);
 }
