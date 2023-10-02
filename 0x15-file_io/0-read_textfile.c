@@ -3,28 +3,29 @@
 
 /**
  * read_textfile - reads text file and prints it to POSIX
- * @filename: name of file
- * @letters: letters to be read and priinted
+ * @filename : name of file
+ * @letters : letters to be read and printed
  * Return: number actual number of letters than can be printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t a, b, c;
-	char *buf;
+	ssize_t o_file, r_file, w_file;
+	char *hold;
 
-	a = open(filename, O_RDONLY);
+	o_file = open(filename, O_RDONLY);
 
-	if (a == -1)
+	if (o_file == -1)
 		return (0);
 
-	buf = malloc(sizeof(char) * letters);
+	hold = malloc(sizeof(char) * letters);
 
-	b = read(a, buf, letters);
-	c = write(STDOUT_FILENO, buf, b);
+	r_file = read(o_file, hold, letters);
 
-	free(buf);
+	w_file = write(STDOUT_FILENO, hold, r_file);
 
-	close(a);
-	return (c);
+	free(hold);
+
+	close(o_file);
+	return (w_file);
 }
 
