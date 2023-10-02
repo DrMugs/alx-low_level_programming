@@ -1,32 +1,32 @@
 #include "main.h"
 
 /**
- * create_file - creates fle
+ * create_file - create file
  * @filename: name of file
- * @text_content : content to be written to file
- * Return: 1 on success -1 on nfailure
+ * @text_content : content to be written to the file
+ * Return: 1 on success (-1) on failure
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int file_d, a, size = 0;
+	int o_file, w_file, i = 0;
 
 	if (!filename)
 		return (-1);
 
 	if (text_content)
 	{
-		for (; text_content[size];)
-			size++;
+		for (; text_content[i];)
+			i++;
 	}
 
-	file_d = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	o_file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
-	a = write(file_d, text_content, size);
+	w_file = write(o_file, text_content, i);
 
-	if (file_d == -1 || a == -1)
+	if (o_file == -1 || w_file == -1)
 		return (-1);
 
-	close(file_d);
+	close(o_file);
 	return (1);
 }
